@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111827">
+<title>Nexora AI</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <div class="brand">NEXORA <span>AI</span></div>
+      <div class="tagline">Learn smarter. Think deeper.</div>
+    </div>
+    <button id="themeBtn" class="icon">☀️</button>
+  </header>
+
+  <main id="home" class="screen active">
+    <section class="hero">
+      <div class="orb">🧠</div>
+      <div>
+        <h1>Hey! Ready to learn?</h1>
+        <p>Your friendly Maths & Science study companion.</p>
+      </div>
+    </section>
+
+    <h2>What are we learning?</h2>
+    <div class="grid">
+      <button class="card" data-prompt="Teach me a maths concept"><b>🧮</b><strong>Maths</strong><small>Learn & solve</small></button>
+      <button class="card" data-prompt="Explain a science concept"><b>🔬</b><strong>Science</strong><small>Understand why</small></button>
+      <button class="card" data-prompt="Help me with an NCERT question"><b>📚</b><strong>NCERT Help</strong><small>Questions & concepts</small></button>
+      <button class="card" data-prompt="Give me a practice question"><b>🧩</b><strong>Practice</strong><small>Test yourself</small></button>
+    </div>
+
+    <h2>Quick modes</h2>
+    <div class="modeRow">
+      <button data-mode="Learn">🧠 Learn</button>
+      <button data-mode="Hint">💡 Hint</button>
+      <button data-mode="Exam">🎯 Exam</button>
+      <button data-mode="Challenge">🔥 Challenge</button>
+    </div>
+  </main>
+
+  <main id="chat" class="screen">
+    <div class="chatHead"><button id="backBtn" class="icon">←</button><div><b>Nexora Tutor</b><small id="modeLabel">Learn Mode</small></div></div>
+    <div id="messages" class="messages">
+      <div class="msg ai"><b>Nexora</b><br>Hey! 👋 Ask me a Maths or Science question. I'll explain it step-by-step.</div>
+    </div>
+    <div class="composer">
+      <input id="input" placeholder="Ask anything..." autocomplete="off">
+      <button id="send">➤</button>
+    </div>
+  </main>
+
+  <main id="practice" class="screen">
+    <h1>Practice 🧩</h1>
+    <p>Choose a level and test your knowledge.</p>
+    <div class="levels">
+      <button data-level="Easy">🟢 Easy</button>
+      <button data-level="Medium">🟡 Medium</button>
+      <button data-level="Hard">🔴 Hard</button>
+      <button data-level="Olympiad">🔥 Olympiad</button>
+    </div>
+    <div id="practiceBox" class="practiceBox">Choose a level to start.</div>
+  </main>
+
+  <main id="profile" class="screen">
+    <h1>Your Progress 🚀</h1>
+    <div class="stats">
+      <div><b>0</b><small>Questions</small></div>
+      <div><b>0%</b><small>Accuracy</small></div>
+      <div><b>1</b><small>Day Streak</small></div>
+    </div>
+    <div class="info"><b>Prototype status</b><p>This version is a front-end prototype. Connect your own AI backend/API to make the tutor generate real answers.</p></div>
+  </main>
+
+  <nav>
+    <button class="nav active" data-screen="home">🏠<span>Home</span></button>
+    <button class="nav" data-screen="chat">🤖<span>Chat</span></button>
+    <button class="nav" data-screen="practice">🧩<span>Practice</span></button>
+    <button class="nav" data-screen="profile">👤<span>Profile</span></button>
+  </nav>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
